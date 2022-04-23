@@ -2,9 +2,17 @@
  
 const iva = 21;
 const actividad = ("bjj" , "muay thai" , "mma");
+var precioPorTres = 3000;
+var precioMasDeTres = 4000;
+/*datos del socio, a futuro la idea es pedir nombre, que se pueda anotar y en caso de estar anotado que lo busque en un determinado grupo, y asi ver si esta la cuota paga o no.
+si esta paga, sigue todo normal
+si esta cerca de finalizar, que de un aviso y mande mail
+si esta impaga, que de las opciones de pago 
+*/
 
-//datos del socio
-let tipoDeActividad;
+let nombreDelSocio = prompt ("ingrese su nombre");
+
+  let tipoDeActividad;
 do {
     tipoDeActividad = prompt ("ingrese su actividad (bjj/muay thai/mma)").toUpperCase();
     if ((tipoDeActividad == "BJJ") || (tipoDeActividad == "MUAY THAI") || (tipoDeActividad == "MMA")) {
@@ -13,7 +21,11 @@ do {
  } while (tipoDeActividad != "BJJ" || tipoDeActividad != "MUAY THAI" || (tipoDeActividad != "MMA"));
 
 
-let cantidadDeDias = prompt ("ingrese cantidad de dias");
+let cantidadDeClases = prompt ("ingrese cantidad de clases por semana");
+let precioFinal;
+if (cantidadDeClases <=3) {precioFinal = precioPorTres} 
+if (cantidadDeClases >3) {precioFinal = precioMasDeTres};
+
 
 let formaDePago;
 do {
@@ -25,6 +37,8 @@ do {
  } while (formaDePago != "EFECTIVO" || formaDePago != "TARJETA");
 
 
-console.log ("tipoDeActividad" + tipoDeActividad);
-console.log ("cantidadDeDias" + cantidadDeDias);
-console.log ("formaDePago" + formaDePago);
+console.log ("Nombre del socio " +  nombreDelSocio);
+console.log ("Tipo de actividad " +  tipoDeActividad);
+console.log ("Cantidad de clases por semana " +  cantidadDeClases);
+console.log ("Forma de pago " +  formaDePago);
+console.log ("Precio final " + precioFinal);
