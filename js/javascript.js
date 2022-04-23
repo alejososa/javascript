@@ -1,6 +1,5 @@
 //sistema de cobro por mensualidad en una academia/gimnasio
  
-const iva = 21;
 const actividad = ("bjj" , "muay thai" , "mma");
 var precioPorTres = 3000;
 var precioMasDeTres = 4000;
