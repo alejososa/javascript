@@ -24,7 +24,7 @@ do {
 
 let cantidadDeClases = prompt ("ingrese cantidad de clases por semana");
 let precioFinal;
-if (cantidadDeClases <=3) {precioFinal = precioPorTres} 
+if (cantidadDeClases <=3) {precioFinal = precioPorTres};
 if (cantidadDeClases >3) {precioFinal = precioMasDeTres};
 if (tipoDeActividad = "LIBRE") {precioFinal = precioLibre};
 
